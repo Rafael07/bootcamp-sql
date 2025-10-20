@@ -26,6 +26,9 @@ Abaixo, um esqueleto inicial que você pode ir preenchendo:
 | Lista 01 | Consultas Básicas |
 | Lista 02 | Filtros e Ordenação |
 | Lista 03 | JOINS Básicos |
+| Lista 04 | Agregações e GROUP BY |
+| Lista 05 | Subconsultas e Funções |
+| Lista 06 | Consultas Complexas |
 
 
 | Aula | Tópico |
