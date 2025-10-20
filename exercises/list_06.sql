@@ -16,10 +16,14 @@ GROUP BY product_id
 ORDER BY total_vendido DESC
 LIMIT 5;
 -- Q3: Calcule o valor total vendido por mês em 1997
-SELECT EXTRACT(MONTH FROM o.order_date) AS mes, SUM(od.unit_price * od.quantity) AS valor_total FROM orders o
+SELECT 
+    EXTRACT(MONTH FROM o.order_date) AS mes, 
+    SUM(od.unit_price * od.quantity) AS valor_total 
+FROM orders o
 JOIN order_details od ON o.order_id = od.order_id
 WHERE EXTRACT(YEAR FROM o.order_date) = '1997'
 GROUP BY mes;
+ORDER BY mes;
 -- Q4: Quais clientes fizeram pedidos com produtos de mais de 3 categorias diferentes?
 WITH cte_distinct_cat_per_order AS (
     SELECT od.order_id, COUNT(DISTINCT p.category_id) AS distinct_cat_per_order FROM order_details od
